@@ -6,7 +6,8 @@ ser = serial.Serial("/dev/ttyACM0",9600)
 
 flag=True
 
-while(flag)
+while(flag):
+	# Switch on the LED
 	#start
 	ser.write("0")
 	time.sleep(1)
@@ -16,13 +17,15 @@ while(flag)
 	time.sleep(1)
 	
 	#DDR
-	ser.write("1")
+	ser.write("4")
 	time.sleep(1)
 	
 	#PORT
-	ser.write("1")
+	ser.write("4")
 	time.sleep(1)
 	
+
+	# Switch OFF the LED
 	#start
 	ser.write("0")
 	time.sleep(1)
@@ -32,7 +35,7 @@ while(flag)
 	time.sleep(1)
 	
 	#DDR
-	ser.write("1")
+	ser.write("4")
 	time.sleep(1)
 	
 	#PORT
